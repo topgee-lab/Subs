@@ -1,0 +1,434 @@
+{
+  "remarks": "🛡️ BS-Bypass | Auto-Balance v2",
+  "dns": {
+    "queryStrategy": "UseIP",
+    "servers": [
+      "https://1.1.1.1/dns-query",
+      "https://8.8.8.8/dns-query"
+    ]
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls", "quic"]
+      }
+    },
+    {
+      "tag": "http",
+      "listen": "127.0.0.1",
+      "port": 10809,
+      "protocol": "http",
+      "settings": {
+        "allowTransparent": false
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls", "quic"]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "fi-1",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [{
+          "address": "65.109.188.60",
+          "port": 443,
+          "users": [{
+            "id": "ae4e44dd-292f-48f4-a4f6-cfe015ab10be",
+            "encryption": "none",
+            "flow": "xtls-rprx-vision"
+          }]
+        }]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.seravo.com",
+          "fingerprint": "qq",
+          "publicKey": "FDbzItmdn5zbth6KxK6sm5ZKQ_HMJQnqHm2AWuFSCSA",
+          "shortId": "d40cee225b5f26e5",
+          "show": false,
+          "spiderX": "/"
+        }
+      }
+    },
+    {
+      "tag": "de-1",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [{
+          "address": "155.254.35.94",
+          "port": 443,
+          "users": [{
+            "id": "ae4e44dd-292f-48f4-a4f6-cfe015ab10be",
+            "encryption": "none",
+            "flow": "xtls-rprx-vision"
+          }]
+        }]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.manitu.de",
+          "fingerprint": "qq",
+          "publicKey": "U5d4daB16h074A371EOQjZrUx8POvAhiyHM7UAfXh0k",
+          "shortId": "bb7c7b7ff4a6",
+          "show": false,
+          "spiderX": "/"
+        }
+      }
+    },
+    {
+      "tag": "nl-1",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [{
+          "address": "107.161.175.107",
+          "port": 443,
+          "users": [{
+            "id": "ae4e44dd-292f-48f4-a4f6-cfe015ab10be",
+            "encryption": "none",
+            "flow": "xtls-rprx-vision"
+          }]
+        }]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.flexwebhosting.nl",
+          "fingerprint": "qq",
+          "publicKey": "hrH83gh613E5NHE5CEkUWMorPMBzUw0S52xNVaUTHg0",
+          "shortId": "45523710b488",
+          "show": false,
+          "spiderX": "/"
+        }
+      }
+    },
+    {
+      "tag": "fr-1",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [{
+          "address": "45.92.218.218",
+          "port": 443,
+          "users": [{
+            "id": "ae4e44dd-292f-48f4-a4f6-cfe015ab10be",
+            "encryption": "none",
+            "flow": "xtls-rprx-vision"
+          }]
+        }]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.o2switch.fr",
+          "fingerprint": "qq",
+          "publicKey": "dkqZkwA1kXFb4T2c-wRvvIol2e81reEWpqaNapq-j2A",
+          "shortId": "47d0194ebcd5",
+          "show": false,
+          "spiderX": "/"
+        }
+      }
+    },
+    {
+      "tag": "gb-1",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [{
+          "address": "45.43.75.96",
+          "port": 443,
+          "users": [{
+            "id": "ae4e44dd-292f-48f4-a4f6-cfe015ab10be",
+            "encryption": "none",
+            "flow": "xtls-rprx-vision"
+          }]
+        }]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "www.20i.com",
+          "fingerprint": "qq",
+          "publicKey": "uvgnnfATgyMbFeZDJ3gA7uf0bNxlpK3fSlj3t-RbABM",
+          "shortId": "15a6ac59f63d",
+          "show": false,
+          "spiderX": "/"
+        }
+      }
+    },
+    {
+      "tag": "px-1",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [{
+          "address": "188.72.111.50",
+          "port": 443,
+          "users": [{
+            "id": "ae4e44dd-292f-48f4-a4f6-cfe015ab10be",
+            "encryption": "none"
+          }]
+        }]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "static.huananconn.xyz",
+          "fingerprint": "edge"
+        },
+        "xhttpSettings": {
+          "host": "static.huananconn.xyz",
+          "path": "/api/v2/assets",
+          "mode": "packet-up"
+        }
+      }
+    },
+    {
+      "tag": "nd-1",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [{
+          "address": "188.72.110.50",
+          "port": 443,
+          "users": [{
+            "id": "ae4e44dd-292f-48f4-a4f6-cfe015ab10be",
+            "encryption": "none"
+          }]
+        }]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "static.huananconn.xyz",
+          "fingerprint": "edge"
+        },
+        "xhttpSettings": {
+          "host": "static.huananconn.xyz",
+          "path": "/api/v2/assets",
+          "mode": "packet-up"
+        }
+      }
+    },
+    {
+      "tag": "nd-2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [{
+          "address": "static.huananconn.xyz",
+          "port": 443,
+          "users": [{
+            "id": "ae4e44dd-292f-48f4-a4f6-cfe015ab10be",
+            "encryption": "none"
+          }]
+        }]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "static.huananconn.xyz",
+          "fingerprint": "edge"
+        },
+        "xhttpSettings": {
+          "host": "static.huananconn.xyz",
+          "path": "/api/v2/assets",
+          "mode": "packet-up"
+        }
+      }
+    },
+    {
+      "tag": "nd-3",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [{
+          "address": "188.72.111.51",
+          "port": 443,
+          "users": [{
+            "id": "ae4e44dd-292f-48f4-a4f6-cfe015ab10be",
+            "encryption": "none"
+          }]
+        }]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "live.huananconn.xyz",
+          "fingerprint": "qq",
+          "alpn": ["h2", "http/1.1"]
+        },
+        "xhttpSettings": {
+          "host": "live.huananconn.xyz",
+          "path": "/media/live/",
+          "mode": "packet-up"
+        }
+      }
+    },
+    {
+      "tag": "nd-4",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [{
+          "address": "live.huananconn.xyz",
+          "port": 443,
+          "users": [{
+            "id": "ae4e44dd-292f-48f4-a4f6-cfe015ab10be",
+            "encryption": "none"
+          }]
+        }]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "live.huananconn.xyz",
+          "fingerprint": "qq",
+          "alpn": ["h2", "http/1.1"]
+        },
+        "xhttpSettings": {
+          "host": "live.huananconn.xyz",
+          "path": "/media/live/",
+          "mode": "packet-up"
+        }
+      }
+    },
+    {
+      "tag": "nd-5",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [{
+          "address": "media.huananconn.xyz",
+          "port": 443,
+          "users": [{
+            "id": "ae4e44dd-292f-48f4-a4f6-cfe015ab10be",
+            "encryption": "none"
+          }]
+        }]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "media.huananconn.xyz",
+          "fingerprint": "edge"
+        },
+        "xhttpSettings": {
+          "host": "media.huananconn.xyz",
+          "path": "/api/v2/assets",
+          "mode": "packet-up"
+        }
+      }
+    },
+    {
+      "tag": "nd-6",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [{
+          "address": "cdn.huananconn.xyz",
+          "port": 443,
+          "users": [{
+            "id": "ae4e44dd-292f-48f4-a4f6-cfe015ab10be",
+            "encryption": "none"
+          }]
+        }]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cdn.huananconn.xyz",
+          "fingerprint": "qq",
+          "alpn": ["h2", "http/1.1"]
+        },
+        "xhttpSettings": {
+          "host": "cdn.huananconn.xyz",
+          "path": "/media/live/",
+          "mode": "packet-up"
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom"
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole"
+    }
+  ],
+  "burstObservatory": {
+    "pingConfig": {
+      "destination": "http://www.gstatic.com/generate_204",
+      "interval": "30s",
+      "sampling": 3,
+      "timeout": "5s"
+    },
+    "subjectSelector": [
+      "fi-1", "de-1", "nl-1", "fr-1", "gb-1",
+      "px-1", "nd-1", "nd-2", "nd-3", "nd-4", "nd-5", "nd-6"
+    ]
+  },
+  "routing": {
+    "domainMatcher": "hybrid",
+    "domainStrategy": "IPIfNonMatch",
+    "balancers": [
+      {
+        "tag": "auto-balancer",
+        "selector": [
+          "fi-1", "de-1", "nl-1", "fr-1", "gb-1",
+          "px-1", "nd-1", "nd-2", "nd-3", "nd-4", "nd-5", "nd-6"
+        ],
+        "strategy": {
+          "type": "leastPing"
+        },
+        "fallbackTag": "direct"
+      }
+    ],
+    "rules": [
+      {
+        "type": "field",
+        "protocol": ["bittorrent"],
+        "outboundTag": "block"
+      },
+      {
+        "type": "field",
+        "ip": ["geoip:private"],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "vk.com", "yandex.ru", "mail.ru", "ok.ru", "gosuslugi.ru",
+          "kremlin.ru", "ozon.ru", "wildberries.ru", "vseinstrumenti.ru",
+          "max.ru", "dzen.ru", "rutube.ru", "avito.ru", "2gis.ru",
+          "kinopoisk.ru", "sberbank.ru", "tbank.ru", "rzd.ru",
+          "nalog.ru", "mchs.gov.ru", "minzdrav.gov.ru", "edu.gov.ru",
+          "mos.ru", "spb.ru"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "network": "tcp,udp",
+        "balancerTag": "auto-balancer"
+      }
+    ]
+  }
+}
